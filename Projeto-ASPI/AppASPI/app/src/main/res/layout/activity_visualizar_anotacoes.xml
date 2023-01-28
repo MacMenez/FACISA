@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:background="@drawable/backgroud_anotacoes"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/bt"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_informacao_do_paciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/backgroud_cardview_anotacoes"
+                app:cardBackgroundColor="@color/cardview_shadow_end_color"
+
+                >
+                <RelativeLayout
+                    android:background="@drawable/backgroud_cardview_anotacoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/alert_informacoes_do_paciente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Informações do Paciente"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/alert_informacoes_nome_do_paciente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nome:"
+                        android:layout_below="@id/alert_informacoes_do_paciente"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="6dp"
+                        />
+                    <TextView
+                        android:id="@+id/visualizar_informacoes_input_nome_do_paciente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/alert_informacoes_nome_do_paciente"
+                        android:layout_marginLeft="6dp"
+                        android:layout_alignBaseline="@id/alert_informacoes_nome_do_paciente"
+                        android:text="Maria Joana Souza"
+                        />
+
+                    <TextView
+                        android:id="@+id/alert_informacoes_idade_paciente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alert_informacoes_nome_do_paciente"
+                        android:text="Idade:"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        />
+                    <TextView
+                        android:id="@+id/visualizar_informacoes_input_idade_paciente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/alert_informacoes_idade_paciente"
+                        android:layout_marginLeft="6dp"
+                        android:layout_alignBaseline="@id/alert_informacoes_idade_paciente"
+                        android:text="18"
+                        />
+                    <TextView
+                        android:id="@+id/alert_informacoes_classificacao_atendimento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alert_informacoes_idade_paciente"
+                        android:text="Classificação:"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="6dp"
+                        />
+                    <TextView
+                        android:id="@+id/visualizar_informacoes_input_classificacao_atendimento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/alert_informacoes_classificacao_atendimento"
+                        android:layout_marginLeft="6dp"
+                        android:layout_alignBaseline="@id/alert_informacoes_classificacao_atendimento"
+                        android:text="Prioridade"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encontra-se"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:textSize="22dp"
+                />
+            <ListView
+                android:id="@+id/visualizar_estado"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:choiceMode="multipleChoice"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicação:"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:textSize="22dp"
+                />
+
+            <ListView
+                android:id="@+id/visualizar_medicacao"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:choiceMode="multipleChoice"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Observação:"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <EditText
+                android:id="@+id/visualizar_observacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:theme="@style/TextAppearance.AppCompat.Headline"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/medic"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background_menu"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#0097A7"
+        tools:ignore="MissingConstraints" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_menu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:civ_border_color="#000000"
+        android:src="@drawable/doctor_icon"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/name_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/image_menu"
+        app:layout_constraintLeft_toLeftOf="@id/image_menu"
+        android:layout_marginTop="6dp"
+        android:textStyle="bold"
+        android:text="Nome: "
+        android:textColor="#FFFFFF"
+        />
+    <TextView
+        android:id="@+id/nome_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@id/name_m"
+        app:layout_constraintBaseline_toBaselineOf="@id/name_m"
+        android:textStyle="normal"
+        android:textColor="#FFFFFF"
+        />
+    <TextView
+        android:id="@+id/cargo_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargo: "
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/name_m"
+        app:layout_constraintLeft_toLeftOf="@id/name_m"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/cargo_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toRightOf="@id/cargo_m"
+        app:layout_constraintBaseline_toBaselineOf="@id/cargo_m"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/matricula_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cargo_m"
+        app:layout_constraintTop_toBottomOf="@id/cargo_m"
+        android:text="Matricula: "
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/matricula_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/matricula_m"
+        app:layout_constraintBaseline_toBaselineOf="@id/matricula_m"
+        android:textColor="#ffff"
+        android:textStyle="normal"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

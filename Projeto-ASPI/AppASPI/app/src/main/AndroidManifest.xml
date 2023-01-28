@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.appaspi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="Projeto ASPI"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".view.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.HomeActivity"/>
+
+        <activity android:name=".view.Lista_de_Atendimentos_Activity" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.HomeActivity"/>
+        </activity>
+
+        <activity android:name=".view.MeusAtendimentos_Activity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.HomeActivity"/>
+        </activity>
+
+        <activity android:name=".view.Fazer_Anotacoes_Activity" android:label="Formulario de Atendimento">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.Lista_de_Atendimentos_Activity"/>
+        </activity>
+
+        <activity android:name=".view.Visualizar_Anotacoes_Activity" android:label="VISUALIZAR ATENDIMENTO">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.Lista_de_Atendimentos_Activity"/>
+        </activity>
+    </application>
+</manifest>
